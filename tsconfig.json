@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./public/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "./src/**/*"],
+  "exclude": ["node_modules", "public", ".cache"],
+  "typeRoots": ["node_modules/@types"]
+}
