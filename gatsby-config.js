@@ -2,16 +2,23 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Starter with Ts and MUI`,
     description: `This is gatsby starter with typescript and material ui`,
+    // siteUrl: "",
     author: `@inrosk`,
   },
   plugins: [
-    "gatsby-plugin-top-layout",
+    `gatsby-theme-material-ui-top-layout`,
     {
-      resolve: "gatsby-plugin-material-ui",
-      // If you want to use styled components you should change the injection order.
+      resolve: `gatsby-theme-material-ui`,
       options: {
-        stylesProvider: {
-          injectFirst: true,
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Poppins`,
+                variants: [`300`, `400`, `500`, `600`, `700`],
+              },
+            ],
+          },
         },
       },
     },
@@ -55,17 +62,18 @@ module.exports = {
         showSpinner: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Poppins`,
-            variants: [`300`, `400`, `500`, `600`, `700`],
-          },
-        ],
-      },
-    },
+
+    // {
+    //   resolve: "gatsby-plugin-sitemap",
+    // },
+    // {
+    //   resolve: "gatsby-plugin-robots-txt",
+    //   options: {
+    //     host: "https://intequa.ca",
+    //     sitemap: "https://intequa.ca/sitemap.xml",
+    //     policy: [{ userAgent: "*", allow: "/" }],
+    //   },
+    // },
     // gatsby-plugin-sitemap
     //gatsby-plugin-robots-txt
 
