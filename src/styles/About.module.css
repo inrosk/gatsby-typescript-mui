@@ -1,0 +1,12 @@
+.servicesBox {
+  padding: 3rem 5rem;
+  height: 100%;
+}
+
+.servicesBox ul {
+  margin-left: 1.5rem;
+}
+.servicesBox ul li {
+  padding: 0.25rem;
+  font-size: 1.1rem;
+}
